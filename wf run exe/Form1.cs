@@ -115,7 +115,8 @@ namespace wf_run_exe
         private void Form1_Load_1(object sender, EventArgs e)
         {            //以下这段代码是通过命令行方式调起一个exe程序，获取这个程序的句柄然后嵌入主的winform窗体中
                      // ProcessStartInfo info = new ProcessStartInfo(@"C:\Program Files (x86)\Microsoft Office\Office12\EXCEL.EXE");
-            ProcessStartInfo info = new ProcessStartInfo(@"D:\grandway\test\FOH 100\原始文件\FPGA更新旧版本0716\tftpd32.exe");
+            ProcessStartInfo info = new ProcessStartInfo(System.Environment.CurrentDirectory + @"\FPGA更新旧版本0716\tftpd32.exe");
+
 
             info.WindowStyle = ProcessWindowStyle.Minimized;
             info.UseShellExecute = false;
